@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/babyPink"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context=".dice.DiceActivity">
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="395dp"
+        android:layout_height="644dp"
+        android:layout_above="@+id/btnRoll"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="9dp"
+        android:background="@color/babyPink"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dicecup - basic version"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvHeader3"
+                android:layout_width="96dp"
+                android:layout_height="34dp"
+                android:layout_weight="1"
+                android:text=" "
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDiceCount"
+                android:layout_width="96dp"
+                android:layout_height="34dp"
+                android:layout_weight="1"
+                android:text="2"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seekBarDiceAmount"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:max="9"
+            android:min="1"
+            android:progressTint="@color/magenta"
+            android:thumbTint="@color/magenta" />
+
+        <FrameLayout
+            android:id="@+id/diceFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:baselineAligned="false"
+            android:foregroundGravity="center"
+            android:background="@color/magenta">
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnStory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="4dp"
+        android:layout_toStartOf="@+id/btnRoll"
+        android:text="Story" />
+
+    <Button
+        android:id="@+id/btnRoll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Roll" />
+
+    <!--
+
+
+<LinearLayout
+    android:id="@+id/layoutDices"
+    android:layout_width="382dp"
+    android:layout_height="646dp"
+    android:layout_below="@+id/layout1"
+    android:layout_marginTop="20dp"
+    android:background="@color/magenta"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/diceRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgDice1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:adjustViewBounds="true"
+            android:maxWidth="100dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/dice1" />
+
+        <ImageView
+            android:id="@+id/imgDice2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"
+            android:maxWidth="100dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/dice1" />
+
+        <ImageView
+            android:id="@+id/imgDice3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"
+            android:maxWidth="100dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/dice1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/diceRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgDice4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:adjustViewBounds="true"
+            android:maxWidth="100dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/dice1" />
+
+        <ImageView
+            android:id="@+id/imgDice5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"
+            android:maxWidth="100dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/dice1" />
+
+        <ImageView
+            android:id="@+id/imgDice6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"
+            android:maxWidth="100dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/dice1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/diceRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgDice7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:adjustViewBounds="true"
+            android:maxWidth="100dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/dice1" />
+
+        <ImageView
+            android:id="@+id/imgDice8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"
+            android:maxWidth="100dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/dice1" />
+
+        <ImageView
+            android:id="@+id/imgDice9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"
+            android:maxWidth="100dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/dice1" />
+
+    </LinearLayout>
+
+
+
+    </LinearLayout>
+     -->
+
+</RelativeLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@color/magenta"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtRollText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|center_horizontal"
+                android:text="TextView"
+                android:textSize="25dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="@color/magenta"
+                    android:gravity="center">
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/dice1"
+                            android:layout_width="20dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            app:srcCompat="@drawable/dice6" />
+
+                        <ImageView
+                            android:id="@+id/dice2"
+                            android:layout_width="20dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/dice6" />
+
+                        <ImageView
+                            android:id="@+id/dice3"
+                            android:layout_width="20dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/dice6" />
+
+                        <ImageView
+                            android:id="@+id/dice4"
+                            android:layout_width="20dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/dice6" />
+
+                        <ImageView
+                            android:id="@+id/dice5"
+                            android:layout_width="20dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/dice6" />
+
+                        <ImageView
+                            android:id="@+id/dice6"
+                            android:layout_width="20dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/dice6" />
+
+                        <ImageView
+                            android:id="@+id/dice7"
+                            android:layout_width="20dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/dice6" />
+
+                        <ImageView
+                            android:id="@+id/dice8"
+                            android:layout_width="20dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/dice6" />
+
+                        <ImageView
+                            android:id="@+id/dice9"
+                            android:layout_width="20dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/dice6" />
+                    </TableRow>
+
+                </TableLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
