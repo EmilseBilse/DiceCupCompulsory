@@ -56,7 +56,8 @@ class DiceStoryActivity() : AppCompatActivity() {
         for (history in diceViewModel.diceHistoryManager.historyList){
             addCustomUI(history)
         }
-        btnBack.setOnClickListener{ onClickBack()}
+        back.setOnClickListener{ onClickBack()}
+        clear.setOnClickListener{onClickClear()}
         swt_text.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
             onClickText()
         })
