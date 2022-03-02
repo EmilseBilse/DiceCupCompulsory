@@ -40,10 +40,14 @@ class DiceActivity : AppCompatActivity() {
         Log.d(TAG, "OnCreate(Bundle?) called")
         setContentView(R.layout.activity_dice)
 
+        if( intent.getSerializableExtra(
+                INTENT_EXTRA_DiceHistoryManager
+            )!= null) {
+            diceViewModel.diceHistoryManager = intent.getSerializableExtra(
+                INTENT_EXTRA_DiceHistoryManager
+            ) as DiceHistoryManager
+        }
 
-        diceViewModel.diceHistoryManager = intent.getSerializableExtra(
-            INTENT_EXTRA_DiceHistoryManager
-        ) as DiceHistoryManager
 
         Sensey.getInstance().init(this);
 
